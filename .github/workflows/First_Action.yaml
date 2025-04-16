@@ -11,4 +11,4 @@ jobs:
         with:
           python-version: "3.11"
       - name: Run Script 
-        run: Python_Skripte/Test2.py
+        run: python Python_Skripte/Test2.py
