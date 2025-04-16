@@ -1,9 +1,14 @@
+name: Build
+on: [push]
+
 jobs:
-  example-job:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Retrieve secret
-        env:
-          super_secret: ${{ secrets.SUPERSECRET }}
-        run: |
-          example-command "$super_secret"
+      - uses: action/checkout@v3
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: Run Script 
+        run: Test2.py
